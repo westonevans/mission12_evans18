@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 const teamNames = [
   {"tid": 159, "cid": 0, "did": 0, "school": "Boston College", "name": "Eagles", "abbrev": "BC", "pop": 161, "city": "Chestnut Hill", "state": "MA", "latitude": 42.330, "longitude": -71.166},
@@ -326,18 +326,19 @@ const teamNames = [
   {"tid": 287, "cid": 19, "did": 39, "school": "Houston Baptist", "name": "Huskies", "abbrev": "HBU", "pop": 33, "city": "Greater Sharpstown", "state": "TX", "latitude": 29.694 , "longitude": -95.515}  
 ];
 
+
 function Welcome() {
-  return (<h1>Team list</h1>);
+  return (<h1>Welcome, please see the team list below:</h1>);
 }
 
-class Team extends React.Component<any, any>{
+class Team extends React.Component<{school: string, name: string, city: string, state: string}>{
   render(){
     
     const oneTeam = this.props;
     
     return (
     <div>
-        <img/>
+        {/* <img/> */}
         <h2>Name: {oneTeam.school}</h2>
         <h3>Mascot: {oneTeam.name}</h3>
         <h3>Location: {oneTeam.city}, {oneTeam.state}</h3>
@@ -363,9 +364,9 @@ function App() {
   );
 }
 
-ReactDOM.render(
-	<App/>,
-  document.getElementById('mountNode'),
-);
+// ReactDOM.render(
+// 	<App/>,
+//   document.getElementById('mountNode'),
+// );
 
 export default App;
